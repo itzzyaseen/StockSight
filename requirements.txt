@@ -1,0 +1,8 @@
+pandas
+sqlalchemy
+pyodbc
+streamlit
+python-dotenv
+yfinance
+plotly
+
