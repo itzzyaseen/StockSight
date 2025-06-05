@@ -6,22 +6,20 @@ from sqlalchemy.orm import sessionmaker
 from datetime import datetime, timedelta
 import uuid
 import streamlit as st
-from dotenv import load_dotenv
 
-# Load environment variables from .env
-load_dotenv()
+# Removed dotenv usage
+# Instead, environment variables should be set directly in Streamlit Cloud or locally
 
 # UUID compatibility for SQL Server
 def generate_uuid():
     return str(uuid.uuid4())
 
-# Database configuration (SQL Server local default)
-DATABASE_URL = os.getenv(
+# Database configuration (SQL Server local default or from env)
+DATABASE_URL = os.environ.get(
     "DATABASE_URL",
     "mssql+pyodbc://localhost/StockSight?driver=ODBC+Driver+17+for+SQL+Server&trusted_connection=yes"
 )
 
-# Create engine and session
 if not DATABASE_URL:
     raise ValueError("DATABASE_URL environment variable not set or invalid.")
 
