@@ -1,6 +1,5 @@
-streamlit==1.45.1
-python-dotenv==1.1.0
-pandas==2.2.3
-requests==2.32.3
-yfinance==0.2.61
-altair==5.5.0
+streamlit==1.24.0
+sqlalchemy==2.0.19
+pandas==2.0.3
+pyodbc==4.0.40
+python-dotenv==1.0.0
